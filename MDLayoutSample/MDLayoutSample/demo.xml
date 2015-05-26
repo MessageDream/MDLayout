@@ -1,0 +1,44 @@
+<View>
+    <Resources>
+	    <Stylesheet ref="ref.xml">
+	        <Style name="textHeaderStyle" target="UIButton">
+	            <Setter property="textColor" value="#000000" />
+	            <Setter property="font" value="SegoeUI-Bold 20" />
+	        </Style>
+	        <Style name="textBodyStyle">
+	            <Setter property="textColor" value="#000000" />
+	            <Setter property="font" value="SegoeUI-Light 17" />
+	        </Style>
+	        <Style name="pageStyle">
+	            <Setter property="backgroundColor" value="#7F7F7F" />
+	            <Setter property="layer.cornerRadius" value="2" />
+	        </Style>
+	        <Style name="buttonStyle">
+	            <Setter property="backgroundColor" value="#000000" state="UIControlStateNormal" />
+	            <Setter property="backgroundColor" value="#7F7F7F" state="UIControlStateHighlighted" />
+	            <Setter property="textColor" value="#FFFFFF" />
+	            <Setter property="cornerRadius" value="0" />
+	            <Setter property="font" value="SegoeUI-Bold 17" />
+	        </Style>
+	        <Style name="textFieldStyle">
+	            <Setter property="font" value="SegoeUI-Light 17" />
+	            <Setter property="backgroundColor" value="#000000" />
+	            <Setter property="textColor" value="#FFFFFF" />
+	        </Style>
+	    </Stylesheet>
+
+	    <Data ref="">
+            <DataItem key="" value=""/>
+	    </Data>
+     </Resources>
+    
+    <Layout>
+    	<UIView id="containner" style="pageStyle">
+    		<UILabel id="headerButton" text="hello" backgroundColor="#FFFFFF" style="buttonStyle">
+    			<Constraints>
+    				<Constraint attribute="centerY" target="containner" targetAttribute="bottom" relation="greaterThanOrEqual" multiplier="1/3" constant="1" id=""/>
+    			</Constraints>
+    		</UILabel>
+    	</UIView>
+    </Layout>
+</View>
