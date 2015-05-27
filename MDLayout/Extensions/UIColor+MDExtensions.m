@@ -1,67 +1,42 @@
 //
-//  UIColor+Extensions.m
+//  UIColor+MDExtensions.m
 //  MDLayout
 //
 //  Created by Jayden Zhao on 15/5/26.
 //  Copyright (c) 2015年 jayden. All rights reserved.
 //
 
-#import "UIColor+Extensions.h"
+#import "UIColor+MDExtensions.h"
 
-@implementation UIColor (Extensions)
+@implementation UIColor (MDMDExtensions)
 
-+ (UIColor *) colorFromString:(NSString *)str
-{
-	if ([[str substringToIndex:1] isEqualToString:@"#"])
-	{
++ (UIColor *)colorFromString:(NSString *)str{
+	if ([[str substringToIndex:1] isEqualToString:@"#"]){
         return [self colorWithHexString:str];
-	}
-	else
-	{
+	}else{
 		NSString *colorString = [str lowercaseString];
 
-		if ([colorString isEqualToString:@"red"])
-		{
+		if ([colorString isEqualToString:@"red"]){
 			return [UIColor redColor];
-		}
-		else if ([colorString isEqualToString:@"blue"])
-		{
+		}else if ([colorString isEqualToString:@"blue"]){
 			return [UIColor blueColor];
-		}
-		else if ([colorString isEqualToString:@"orange"])
-		{
+		}else if ([colorString isEqualToString:@"orange"]){
 			return [UIColor orangeColor];
-		}
-		else if ([colorString isEqualToString:@"yellow"])
-		{
+		}else if ([colorString isEqualToString:@"yellow"]){
 			return [UIColor yellowColor];
-		}
-		else if ([colorString isEqualToString:@"brown"])
-		{
+		}else if ([colorString isEqualToString:@"brown"]){
 			return [UIColor brownColor];
-		}
-		else if ([colorString isEqualToString:@"gray"])
-		{
+		}else if ([colorString isEqualToString:@"gray"]){
 			return [UIColor grayColor];
-		}
-		else if ([colorString isEqualToString:@"green"])
-		{
+		}else if ([colorString isEqualToString:@"green"]){
 			return [UIColor greenColor];
-		}
-		else if ([colorString isEqualToString:@"purple"])
-		{
+		}else if ([colorString isEqualToString:@"purple"]){
 			return [UIColor purpleColor];
-		}
-		else if ([colorString isEqualToString:@"magenta"])
-		{
+		}else if ([colorString isEqualToString:@"magenta"]){
 			return [UIColor magentaColor];
-		}
-		else if ([colorString isEqualToString:@"cyan"])
-		{
+		}else if ([colorString isEqualToString:@"cyan"]){
 			return [UIColor cyanColor];
-		}
-		else if ([colorString isEqualToString:@"cyan"])
-		{
+		}else if ([colorString isEqualToString:@"cyan"]){
 			return [UIColor whiteColor];
 		}
 	}

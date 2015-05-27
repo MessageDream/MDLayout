@@ -15,10 +15,11 @@
 		B20C71CB1B12FCE900366747 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B20C71C91B12FCE900366747 /* LaunchScreen.xib */; };
 		B20C71D71B12FCE900366747 /* MDLayoutSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B20C71D61B12FCE900366747 /* MDLayoutSampleTests.m */; };
 		B20C72881B1402E700366747 /* demo.xml in Resources */ = {isa = PBXBuildFile; fileRef = B20C72871B1402E700366747 /* demo.xml */; };
-		B2C804851B1404AB00F6CAF2 /* libMDLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C804841B1404AB00F6CAF2 /* libMDLayout.a */; };
 		B2C804871B1404C000F6CAF2 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C804861B1404C000F6CAF2 /* libbz2.dylib */; };
 		B2C804891B1404C900F6CAF2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C804881B1404C900F6CAF2 /* libxml2.dylib */; };
 		B2C8048D1B14076200F6CAF2 /* ref.xml in Resources */ = {isa = PBXBuildFile; fileRef = B2C8048C1B14076200F6CAF2 /* ref.xml */; };
+		B2C804B01B1559B100F6CAF2 /* libMDLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C804AF1B1559B100F6CAF2 /* libMDLayout.a */; };
+		B2C804B51B157C6200F6CAF2 /* libPods-MDLayout-Masonry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C804B41B157C6200F6CAF2 /* libPods-MDLayout-Masonry.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +47,11 @@
 		B20C71D51B12FCE900366747 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B20C71D61B12FCE900366747 /* MDLayoutSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDLayoutSampleTests.m; sourceTree = "<group>"; };
 		B20C72871B1402E700366747 /* demo.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = demo.xml; sourceTree = "<group>"; };
-		B2C804841B1404AB00F6CAF2 /* libMDLayout.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMDLayout.a; path = "../../build/Debug-iphoneos/libMDLayout.a"; sourceTree = "<group>"; };
 		B2C804861B1404C000F6CAF2 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
 		B2C804881B1404C900F6CAF2 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		B2C8048C1B14076200F6CAF2 /* ref.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ref.xml; sourceTree = "<group>"; };
+		B2C804AF1B1559B100F6CAF2 /* libMDLayout.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMDLayout.a; path = "../../build/Debug-iphoneos/libMDLayout.a"; sourceTree = "<group>"; };
+		B2C804B41B157C6200F6CAF2 /* libPods-MDLayout-Masonry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MDLayout-Masonry.a"; path = "../../Pods/build/Debug-iphoneos/libPods-MDLayout-Masonry.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C804B51B157C6200F6CAF2 /* libPods-MDLayout-Masonry.a in Frameworks */,
+				B2C804B01B1559B100F6CAF2 /* libMDLayout.a in Frameworks */,
 				B2C804891B1404C900F6CAF2 /* libxml2.dylib in Frameworks */,
 				B2C804871B1404C000F6CAF2 /* libbz2.dylib in Frameworks */,
-				B2C804851B1404AB00F6CAF2 /* libMDLayout.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,9 +112,10 @@
 		B20C71BA1B12FCE900366747 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B2C804B41B157C6200F6CAF2 /* libPods-MDLayout-Masonry.a */,
+				B2C804AF1B1559B100F6CAF2 /* libMDLayout.a */,
 				B2C804881B1404C900F6CAF2 /* libxml2.dylib */,
 				B2C804861B1404C000F6CAF2 /* libbz2.dylib */,
-				B2C804841B1404AB00F6CAF2 /* libMDLayout.a */,
 				B20C72871B1402E700366747 /* demo.xml */,
 				B2C8048C1B14076200F6CAF2 /* ref.xml */,
 				B20C71BB1B12FCE900366747 /* Info.plist */,
@@ -382,6 +386,7 @@
 					"/Users/jayden/Documents/WorkSpace/XCodeProject/MDLayout/build/Debug-iphoneos",
 					"/Users/jayden/Documents/WorkSpace/XCodeProject/MDLayout/Pods/build/Debug-iphoneos",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -403,6 +408,7 @@
 					"/Users/jayden/Documents/WorkSpace/XCodeProject/MDLayout/build/Debug-iphoneos",
 					"/Users/jayden/Documents/WorkSpace/XCodeProject/MDLayout/Pods/build/Debug-iphoneos",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -24,6 +24,7 @@
 
 @interface MDStylesheet : NSObject
 @property(nonatomic,strong)NSString *styleRef;
+@property(nonatomic,strong)NSMutableDictionary *targetStyleSheet;
 @property(nonatomic,strong)NSMutableDictionary *styleSheet;
 - (void)loadStyleFromStyleFile:(NSString *)fullPath;
 + (MDStylesheet *)readStyleSheetFromXMLElement:(RXMLElement *)element;

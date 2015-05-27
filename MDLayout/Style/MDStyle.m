@@ -45,6 +45,12 @@
             if (!strongSelf.styleSheet){
                 strongSelf.styleSheet = [NSMutableDictionary dictionary];
             }
+            if (!strongSelf.targetStyleSheet) {
+                 strongSelf.targetStyleSheet = [NSMutableDictionary dictionary];
+            }
+            if (style.target) {
+                [strongSelf.targetStyleSheet setObject:style forKey:style.target];
+            }
             [strongSelf.styleSheet setObject:style forKey:style.name];
         }];
     }
@@ -61,6 +67,12 @@
         MDStyle *style = [MDStyle readStylesFromXMLElement:e];
         if (!styleSheet.styleSheet){
            styleSheet.styleSheet = [NSMutableDictionary dictionary];
+        }
+        if (!styleSheet.targetStyleSheet) {
+            styleSheet.targetStyleSheet = [NSMutableDictionary dictionary];
+        }
+        if (style.target) {
+            [styleSheet.targetStyleSheet setObject:style forKey:style.target];
         }
         [styleSheet.styleSheet setObject:style forKey:style.name];
     }];

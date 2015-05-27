@@ -34,11 +34,16 @@
     
     <Layout>
     	<UIView id="containner" style="pageStyle">
-    		<UILabel id="headerButton" text="hello" backgroundColor="#FFFFFF" style="buttonStyle">
+    		<UILabel id="headerLable" text="hello" textColor="#7F7F7F" backgroundColor="#64F3f2" style="textBodyStyle">
     			<Constraints>
-    				<Constraint attribute="centerY" target="containner" targetAttribute="bottom" relation="greaterThanOrEqual" multiplier="1/3" constant="1" id=""/>
+    				<Constraint attribute="edges" target="containner" relation="=" constant="10,50,10,50" id="left"/>
     			</Constraints>
     		</UILabel>
+            <UILabel id="headerButton" text="你好" backgroundColor="#644ff1" style="buttonStyle">
+                <Constraints>
+                    <Constraint attribute="width"  relation="=" target="containner" targetAttribute="width" multipliedBy="0.5" id="size"/>
+                </Constraints>
+            </UILabel>
     	</UIView>
     </Layout>
 </View>

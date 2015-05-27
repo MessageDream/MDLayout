@@ -7,31 +7,36 @@
 //
 
 #import "MDLayout.h"
-#import "UIColor+Extensions.h"
+#import "MDConstraint.h"
+#import "UIVIew+MDExtensions.h"
+#import "UIColor+MDExtensions.h"
 
 @implementation MDLayoutInfo
 +(UIView *)loadViewWithXMLElement:(RXMLElement *)element andSuperView:(UIView *)superView{
-    NSString *eName = element.tag;
+    //    NSString *eName = element.tag;
     for (RXMLElement *e in [element children]) {
-         NSString *ename = e.tag;
+        NSString *ename = e.tag;
         if([ename isEqualToString:@"Constraints"]){
-            return superView;
+            MDConstraints *constraints = [[MDConstraints alloc] initWithView:superView];
+            [constraints loadConstraintsFromXMLElement:e];
+            [superView setMdConstraints:constraints];
+            continue;
         }else{
             Class viewClass = NSClassFromString(ename);
-//            if ([viewClass] || [viewClass isKindOfClass: [UIView class]]) {
-//                MDLayoutInfo *layout = [[MDLayoutInfo alloc] init];
-//                layout.parentView = view;
+            //            if ([viewClass] || [viewClass isKindOfClass: [UIView class]]) {
+            //                MDLayoutInfo *layout = [[MDLayoutInfo alloc] init];
+            //                layout.parentView = view;
             UIView *curView = [[viewClass alloc] init];
             NSArray *names = e.attributeNames;
             for (NSString *attrName in names) {
                 if ([attrName isEqualToString:@"id"]) {
-                    
+                    [curView setValue:@([[e attribute:attrName] hash]) forKey:@"tag"];
                 }else if ([attrName isEqualToString:@"style"]){
-                
+                    
                 }else{
                     id value = [e attribute:attrName];
-                   if([attrName containsString:@"Color"]){
-                       value = [UIColor colorFromString:[value stringValue]];
+                    if([attrName containsString:@"Color"]){
+                        value = [UIColor colorFromString:value];
                     }
                     if ([attrName containsString:@"."]) {
                         [curView setValue:value forKeyPath:attrName];
@@ -40,15 +45,21 @@
                     }
                 }
             }
-                UIView *view = [self loadViewWithXMLElement:e andSuperView:curView];
-                if (superView) {
-                    [superView addSubview:view];
-                    return superView;
-                }
-                return view;
-//            }
+            UIView *view = [self loadViewWithXMLElement:e andSuperView:curView];
+            if (superView) {
+                [superView addSubview:view];
+                
+            }else{
+                superView = view;
+            }
+//            return view;
+            //            }
         }
     }
-    return nil;
+    NSArray *subViews = superView.subviews;
+    for (UIView *view in subViews) {
+        [view.mdConstraints makeAndInstall];
+    }
+    return superView;
 }
 @end

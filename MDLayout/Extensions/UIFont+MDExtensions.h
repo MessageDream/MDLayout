@@ -1,5 +1,5 @@
 //
-//  UIFont+Extensions.h
+//  UIFont+MDExtensions.h
 //  MDLayout
 //
 //  Created by Jayden Zhao on 15/5/26.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIFont (Extensions)
+@interface UIFont (MDExtensions)
 
 + (void) registerCustomFonts;
 

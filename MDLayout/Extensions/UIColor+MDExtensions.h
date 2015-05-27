@@ -1,5 +1,5 @@
 //
-//  UIColor+Extensions.h
+//  UIColor+MDExtensions.h
 //  MDLayout
 //
 //  Created by Jayden Zhao on 15/5/26.
@@ -7,8 +7,8 @@
 //
 #import <UIKit/UIKit.h>
 
-@interface UIColor (Extensions)
+@interface UIColor (MDMDExtensions)
 
-+ (UIColor *) colorFromString:(NSString *)str;
++ (UIColor *)colorFromString:(NSString *)str;
 
 @end

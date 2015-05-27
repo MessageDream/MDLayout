@@ -21,6 +21,7 @@
     RXMLElement *rootXML = [RXMLElement elementFromXMLFile:@"demo.xml"];
     //    MDStylesheet *sheet = [MDStylesheet readStyleSheetFromXMLElement:[rootXML child:@"Resources"]];
     UIView *layoutView = [MDLayoutInfo loadViewWithXMLElement:[rootXML child:@"Layout"] andSuperView:nil];
+    layoutView.backgroundColor = [UIColor whiteColor];
     self.view = layoutView;
 }
 - (void)viewDidLoad {

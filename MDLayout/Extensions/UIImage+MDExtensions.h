@@ -1,5 +1,5 @@
 //
-//  UIImage+Extensions.h
+//  UIImage+MDExtensions.h
 //  MDLayout
 //
 //  Created by Jayden Zhao on 15/5/26.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (Extensions)
+@interface UIImage (MDExtensions)
 
 + (UIImage *) imageWithColor:(UIColor *)color
 	cornerRadius:(CGFloat)cornerRadius;
