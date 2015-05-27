@@ -14,14 +14,14 @@
 @implementation MDConstraint
 -(instancetype)initWithXMLElement:(RXMLElement *)element{
     if (self = [super init]) {
-        self.cid = [element attribute:@"id"];
-        self.attribute = [element attribute:@"attribute"];
-        self.target =[element attribute:@"target"];
-        self.targetAttribute = [element attribute:@"targetAttribute"];
-        self.relation = [element attribute:@"relation"];
-        self.multipliedBy = [element attribute:@"multipliedBy"];
-        self.constant = [element attribute:@"constant"];
-        self.priority = [element attribute:@"priority"];
+        NSArray *array = element.attributeNames;
+        for (NSString *attr in array) {
+            if ([attr isEqualToString:@"id"]) {
+                self.cid = [element attribute:attr];
+            }else{
+                [self setValue:[element attribute:attr] forKey:attr];
+            }
+        }
     }
     return self;
 }

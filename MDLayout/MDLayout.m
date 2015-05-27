@@ -10,6 +10,7 @@
 #import "MDConstraint.h"
 #import "UIVIew+MDExtensions.h"
 #import "UIColor+MDExtensions.h"
+#import "UIButton+MDExtensions.h"
 
 @implementation MDLayoutInfo
 +(UIView *)loadViewWithXMLElement:(RXMLElement *)element andSuperView:(UIView *)superView{

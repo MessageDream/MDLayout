@@ -36,14 +36,15 @@
     	<UIView id="containner" style="pageStyle">
     		<UILabel id="headerLable" text="hello" textColor="#7F7F7F" backgroundColor="#64F3f2" style="textBodyStyle">
     			<Constraints>
-    				<Constraint attribute="edges" target="containner" relation="=" constant="10,50,10,50" id="left"/>
+    				<Constraint attribute="edges" target="containner" relation="=" constant="150,50,10,50" id="left"/>
     			</Constraints>
     		</UILabel>
-            <UILabel id="headerButton" text="你好" backgroundColor="#644ff1" style="buttonStyle">
+            <UIButton id="headerButton" titleforNormalState="你好" titleforSelectedState="扯淡" selected="YES"  style="buttonStyle">
                 <Constraints>
                     <Constraint attribute="width"  relation="=" target="containner" targetAttribute="width" multipliedBy="0.5" id="size"/>
+                    <Constraint attribute="top"  relation="=" target="containner" constant="200" id="size"/>
                 </Constraints>
-            </UILabel>
+            </UIButton>
     	</UIView>
     </Layout>
 </View>

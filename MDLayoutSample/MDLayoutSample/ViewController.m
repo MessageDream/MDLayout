@@ -25,12 +25,18 @@
     self.view = layoutView;
 }
 - (void)viewDidLoad {
-    
+    [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    [self topLayoutGuide];
+    [self bottomLayoutGuide];
 }
 
 @end
