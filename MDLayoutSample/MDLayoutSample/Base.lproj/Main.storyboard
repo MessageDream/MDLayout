@@ -32,8 +32,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekq-a4-kfO">
-                                <rect key="frame" x="326" y="285" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekq-a4-kfO">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
                                 <state key="normal" title="load">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -43,6 +43,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="ekq-a4-kfO" secondAttribute="centerY" id="Ec6-TQ-j0W"/>
+                            <constraint firstAttribute="centerX" secondItem="ekq-a4-kfO" secondAttribute="centerX" id="VTc-bp-Zo2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rIM-EN-2we"/>
                 </viewController>
