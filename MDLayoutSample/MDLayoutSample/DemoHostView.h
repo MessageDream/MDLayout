@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DemoHostView : UIView
-@property(nonatomic,strong)UIButton *headerButton;
+@property(nonatomic,strong)UIButton *centerButton;
 @end

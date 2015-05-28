@@ -15,4 +15,5 @@
 @property(nonatomic,strong)NSString *mid;
 @property(nonatomic,weak)id host;
 -(void)applyStyle:(MDStyle *)style;
+-(void)applyValue:(id)value withKey:(NSString *)key;
 @end

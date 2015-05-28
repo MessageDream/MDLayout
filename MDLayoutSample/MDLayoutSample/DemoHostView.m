@@ -10,7 +10,11 @@
 
 @implementation DemoHostView
 
--(void)headerButton_click:(id)sender{
+-(void)centerButton_click:(id)sender{
     NSLog(@"clicked:%@",sender);
+}
+
+-(void)dealloc{
+
 }
 @end

@@ -8,6 +8,7 @@
 
 #import "UIView+MDExtensions.h"
 #import "UIColor+MDExtensions.h"
+#import "UIFont+MDExtensions.h"
 #import "MDStyle.h"
 #import <objc/runtime.h>
 
@@ -41,15 +42,25 @@ const char*  const mId = "mId";
 
 -(void)applyStyle:(MDStyle *)style{
     for (MDStyleItem *styleItem in style.styleArray) {
-        id value = styleItem.styleValue;
-        if([styleItem.styleProperty containsString:@"Color"]){
-            value = [UIColor colorFromString:value];
-        }
-        if ([styleItem.styleProperty containsString:@"."]) {
-            [self setValue:value forKeyPath:styleItem.styleProperty];
+        [self applyValue:styleItem.styleValue withKey:styleItem.styleProperty];
+    }
+}
+
+-(void)applyValue:(id)value withKey:(NSString *)key{
+    if([key containsString:@"Color"]){
+        value = [UIColor colorFromString:value];
+    }
+    if ([key containsString:@"font"]) {
+        if ([value floatValue] > 0) {
+            value = [UIFont systemFontOfSize:[value floatValue]];
         }else{
-            [self setValue:value forKey:styleItem.styleProperty];
+            value = [UIFont fontWithNameAndSize:value];
         }
+    }
+    if ([key containsString:@"."]) {
+        [self setValue:value forKeyPath:key];
+    }else{
+        [self setValue:value forKey:key];
     }
 }
 @end

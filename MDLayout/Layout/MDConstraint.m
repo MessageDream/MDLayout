@@ -73,7 +73,7 @@
     }
     
     float actualFloat = [constant floatValue];
-    if (actualFloat > 0) {
+    if (actualFloat) {
         _constant = [NSNumber numberWithFloat:actualFloat];
     }
     

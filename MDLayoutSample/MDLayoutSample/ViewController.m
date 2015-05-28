@@ -7,21 +7,17 @@
 //
 
 #import "ViewController.h"
-#import "MDStyle.h"
 #import "MDLayout.h"
 
 @interface ViewController ()
-@property(nonatomic,strong)UIButton *headerButton;
+@property(nonatomic,strong)UIButton *centerButton;
 @end
 
 @implementation ViewController
 
 -(void)loadView{
     [super viewDidLoad];
-    RXMLElement *rootXML = [RXMLElement elementFromXMLFile:@"demo.xml"];
-    //    MDStylesheet *sheet = [MDStylesheet readStyleSheetFromXMLElement:[rootXML child:@"Resources"]];
-    UIView *layoutView = [MDLayoutInfo loadViewWithXMLElement:[rootXML child:@"Layout"] superView:nil andHost:self];
-    layoutView.backgroundColor = [UIColor whiteColor];
+    UIView *layoutView = [MDLayout loadViewWithFileName:@"demo.xml" withSuperView:nil andHost:nil];
     self.view = layoutView;
 }
 - (void)viewDidLoad {
@@ -37,7 +33,7 @@
     [super viewDidLayoutSubviews];
 }
 
--(void)headerButton_click:(id)sender{
+-(void)centerButton_click:(id)sender{
     NSLog(@"clicked in controller:%@",sender);
 }
 @end

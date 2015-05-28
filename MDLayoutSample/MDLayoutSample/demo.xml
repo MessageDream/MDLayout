@@ -1,24 +1,19 @@
 <View>
     <Resources>
-	    <Stylesheet ref="ref.xml">
-	        <Style name="textHeaderStyle" target="UIButton">
+	    <Stylesheet ref="styleRef.xml">
+            <Style name="pageStyle">
+                <Setter property="backgroundColor" value="#7F7F7F" />
+            </Style>
+	        <Style name="textHeaderStyle" target="">
 	            <Setter property="textColor" value="#000000" />
+                <Setter property="backgroundColor" value="green" />
 	            <Setter property="font" value="SegoeUI-Bold 20" />
 	        </Style>
-	        <Style name="textBodyStyle">
-	            <Setter property="textColor" value="#000000" />
-	            <Setter property="font" value="SegoeUI-Light 17" />
-	        </Style>
-	        <Style name="pageStyle">
-	            <Setter property="backgroundColor" value="#7F7F7F" />
-	            <Setter property="layer.cornerRadius" value="2" />
-	        </Style>
 	        <Style name="buttonStyle">
-	            <Setter property="backgroundColor" value="#000000" state="UIControlStateNormal" />
-	            <Setter property="backgroundColor" value="#7F7F7F" state="UIControlStateHighlighted" />
-	            <Setter property="textColor" value="#FFFFFF" />
-	            <Setter property="cornerRadius" value="0" />
-	            <Setter property="font" value="SegoeUI-Bold 17" />
+                <Setter property="titleforNormalState" value="on my g" />
+                <Setter property="titleforSelectedState" value="click me" />
+                <Setter property="selected" value="YES" />
+	            <Setter property="layer.cornerRadius" value="2" />
 	        </Style>
 	        <Style name="textFieldStyle">
 	            <Setter property="font" value="SegoeUI-Light 17" />
@@ -39,17 +34,27 @@
     
     <Layout>
     	<DemoHostView id="containner" style="pageStyle">
-    		<UILabel id="headerLable" text="hello" textColor="#7F7F7F" backgroundColor="#64F3f2" style="textBodyStyle">
+    		<UILabel id="headerLable" textAlignment="1" text="hello" style="textHeaderStyle">
     			<Constraints>
-    				<Constraint attribute="edges" target="containner" relation="=" constant="150,50,10,50" id="left"/>
+    				<Constraint attribute="top" target="containner" relation="=" constant="100" id="top"/>
+                    <Constraint attribute="left" target="containner" relation="=" constant="10" id="left"/>
+                    <Constraint attribute="right" target="containner" relation="=" constant="-10" id="right"/>
     			</Constraints>
     		</UILabel>
-            <UIButton id="headerButton" mdoutlet="YES" titleforNormalState="你好" titleforSelectedState="扯淡" selected="YES" buttonType="UIButtonTypeCustom" clickAction="headerButton_click:" style="buttonStyle">
+            <UIButton id="centerButton" mdoutlet="YES" buttonType="UIButtonTypeCustom" clickAction="centerButton_click:" style="buttonStyle">
                 <Constraints>
-                    <Constraint attribute="width"  relation="=" target="containner" targetAttribute="width" multipliedBy="0.5" id="size"/>
-                    <Constraint attribute="top"  relation="=" target="containner" constant="200" id="size"/>
+                    <Constraint attribute="width"  relation="=" target="containner" targetAttribute="width" multipliedBy="0.8" id="width"/>
+                    <Constraint attribute="height"  relation="=" constant="200" id="height"/>
+                    <Constraint attribute="center"  relation="=" target="containner" id="center"/>
                 </Constraints>
             </UIButton>
+            <UILabel text="bottom" textAlignment="1" style="bottomLableStyle">
+                <Constraints>
+                    <Constraint attribute="bottom" target="containner" relation="=" constant="-100" id="top"/>
+                    <Constraint attribute="left" target="containner" relation="=" constant="10" id="left"/>
+                    <Constraint attribute="right" target="containner" relation="=" constant="-10" id="right"/>
+                </Constraints>
+            </UILabel>
     	</DemoHostView>
     </Layout>
 </View>

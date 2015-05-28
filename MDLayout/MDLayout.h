@@ -8,11 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import<UIKit/UIKit.h>
-#import "RXMLElement.h"
 
-@interface MDLayoutInfo : NSObject
-@property(nonatomic,strong)UIView *parentView;
-@property(nonatomic,strong)NSMutableDictionary *viewInfo;
-@property(nonatomic,strong)NSMutableArray *constraintsInfo;
-+(UIView *)loadViewWithXMLElement:(RXMLElement *)element superView:(UIView *)superView andHost:(id)host;
+@interface MDLayout : NSObject
++ (void)setLocationBundle:(NSBundle *)bundle;
++ (UIView *)loadViewWithFileName:(NSString *)fileName withSuperView:(UIView *)superView andHost:(id)host;
 @end
