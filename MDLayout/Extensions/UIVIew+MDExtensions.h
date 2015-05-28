@@ -12,5 +12,7 @@
 @class MDStyle,MDConstraints;
 @interface UIView (MDExtensions)
 @property(nonatomic,strong)MDConstraints *mdConstraints;
+@property(nonatomic,strong)NSString *mid;
+@property(nonatomic,weak)id host;
 -(void)applyStyle:(MDStyle *)style;
 @end

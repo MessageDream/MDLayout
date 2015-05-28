@@ -12,6 +12,8 @@
 #import <objc/runtime.h>
 
 const char*  const mdConstraintsId = "mdConstraintsId";
+const char*  const hostId = "hostId";
+const char*  const mId = "mId";
 @implementation UIView (MDExtensions)
 -(void)setMdConstraints:(MDConstraints *)mdConstraints{
     objc_setAssociatedObject(self,mdConstraintsId , mdConstraints,OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -19,6 +21,22 @@ const char*  const mdConstraintsId = "mdConstraintsId";
 
 -(MDConstraints *)mdConstraints{
     return objc_getAssociatedObject(self, mdConstraintsId);
+}
+
+-(void)setMid:(NSString *)mid{
+     objc_setAssociatedObject(self,mId, mid,OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+-(NSString *)mid{
+    return objc_getAssociatedObject(self, mId);
+}
+
+-(void)setHost:(id)host{
+    objc_setAssociatedObject(self,hostId, host,OBJC_ASSOCIATION_ASSIGN);
+}
+
+-(id)host{
+    return objc_getAssociatedObject(self, hostId);
 }
 
 -(void)applyStyle:(MDStyle *)style{

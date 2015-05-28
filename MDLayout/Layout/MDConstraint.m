@@ -17,7 +17,7 @@
         NSArray *array = element.attributeNames;
         for (NSString *attr in array) {
             if ([attr isEqualToString:@"id"]) {
-                self.cid = [element attribute:attr];
+                self.mid = [element attribute:attr];
             }else{
                 [self setValue:[element attribute:attr] forKey:attr];
             }

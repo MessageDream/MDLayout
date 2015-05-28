@@ -13,7 +13,7 @@
 #import "UIButton+MDExtensions.h"
 
 @implementation MDLayoutInfo
-+(UIView *)loadViewWithXMLElement:(RXMLElement *)element andSuperView:(UIView *)superView{
++(UIView *)loadViewWithXMLElement:(RXMLElement *)element superView:(UIView *)superView andHost:(id)host{
     //    NSString *eName = element.tag;
     for (RXMLElement *e in [element children]) {
         NSString *ename = e.tag;
@@ -28,12 +28,20 @@
             //                MDLayoutInfo *layout = [[MDLayoutInfo alloc] init];
             //                layout.parentView = view;
             UIView *curView = [[viewClass alloc] init];
+            if (!host) {
+                host = curView;
+            }
+            curView.host = host;
             NSArray *names = e.attributeNames;
+            NSString *viewId = [e attribute:@"id"];
             for (NSString *attrName in names) {
                 if ([attrName isEqualToString:@"id"]) {
-                    [curView setValue:@([[e attribute:attrName] hash]) forKey:@"tag"];
+                    [curView setValue:@([viewId hash]) forKey:@"tag"];
+                    [curView setValue:viewId  forKey:@"mid"];
                 }else if ([attrName isEqualToString:@"style"]){
                     
+                }else if([attrName isEqualToString:@"mdoutlet"]){
+                    [host setValue:curView forKey:viewId];
                 }else{
                     id value = [e attribute:attrName];
                     if([attrName containsString:@"Color"]){
@@ -46,14 +54,13 @@
                     }
                 }
             }
-            UIView *view = [self loadViewWithXMLElement:e andSuperView:curView];
+            UIView *view = [self loadViewWithXMLElement:e superView:curView andHost:host];
             if (superView) {
                 [superView addSubview:view];
                 
             }else{
                 superView = view;
             }
-//            return view;
             //            }
         }
     }

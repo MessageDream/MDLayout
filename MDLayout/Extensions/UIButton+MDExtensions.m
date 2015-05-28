@@ -7,17 +7,15 @@
 //
 
 #import "UIButton+MDExtensions.h"
+#import "UIView+MDExtensions.h"
 #import <objc/runtime.h>
 
-const char* const imageforNormalStateId = "imageforNormalStateId";
-const char* const imageforSelectedStateId = "imageforSelectedStateId";
-const char* const titleforNormalStateId = "titleforNormalStateId";
-const char* const titleforSelectedStateId = "titleforSelectedStateId";
+const char* const clickActionId = "clickActionId";
+
 @implementation UIButton (MDExtensions)
 
 
 -(void)setImageforNormalState:(UIImage *)imageforNormalState{
-//    objc_setAssociatedObject(self, imageforNormalStateId, imageforNormalState, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self setImage:imageforNormalState forState:UIControlStateNormal];
 }
 
@@ -26,7 +24,6 @@ const char* const titleforSelectedStateId = "titleforSelectedStateId";
 }
 
 -(void)setImageforSelectedState:(UIImage *)imageforSelectedState{
-//    objc_setAssociatedObject(self, imageforSelectedStateId, imageforSelectedState, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self setImage:imageforSelectedState forState:UIControlStateSelected];
 }
 
@@ -36,7 +33,6 @@ const char* const titleforSelectedStateId = "titleforSelectedStateId";
 
 -(void)setTitleforNormalState:(NSString *)titleforNormalState{
     [self setTitle:titleforNormalState forState:UIControlStateNormal];
-//     [self setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
 }
 
 -(NSString *)titleforNormalState{
@@ -45,10 +41,20 @@ const char* const titleforSelectedStateId = "titleforSelectedStateId";
 
 -(void)setTitleforSelectedState:(NSString *)titleforSelectedState{
     [self setTitle:titleforSelectedState forState:UIControlStateSelected];
-//    [self setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
 }
 
 -(NSString *)titleforSelectedState{
     return [self titleForState:UIControlStateSelected];
+}
+
+-(void)setClickAction:(NSString *)clickAction{
+    if (self.host) {
+        [self addTarget:self.host action:NSSelectorFromString(clickAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    objc_setAssociatedObject(self, clickActionId, clickAction, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+-(NSString *)clickAction{
+    return objc_getAssociatedObject(self, clickActionId);
 }
 @end

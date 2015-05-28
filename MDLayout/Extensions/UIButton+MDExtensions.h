@@ -13,4 +13,5 @@
 @property(nonatomic,strong)UIImage *imageforSelectedState;
 @property(nonatomic,strong)NSString *titleforNormalState;
 @property(nonatomic,strong)NSString *titleforSelectedState;
+@property(nonatomic,strong)NSString *clickAction;
 @end

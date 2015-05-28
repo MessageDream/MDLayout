@@ -21,6 +21,7 @@
 		B2C8048D1B14076200F6CAF2 /* ref.xml in Resources */ = {isa = PBXBuildFile; fileRef = B2C8048C1B14076200F6CAF2 /* ref.xml */; };
 		B2C804B01B1559B100F6CAF2 /* libMDLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C804AF1B1559B100F6CAF2 /* libMDLayout.a */; };
 		B2C804B51B157C6200F6CAF2 /* libPods-MDLayout-Masonry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C804B41B157C6200F6CAF2 /* libPods-MDLayout-Masonry.a */; };
+		B2C804BB1B16B05400F6CAF2 /* DemoHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C804BA1B16B05400F6CAF2 /* DemoHostView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		B2C8048C1B14076200F6CAF2 /* ref.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ref.xml; sourceTree = "<group>"; };
 		B2C804AF1B1559B100F6CAF2 /* libMDLayout.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMDLayout.a; path = "../../build/Debug-iphoneos/libMDLayout.a"; sourceTree = "<group>"; };
 		B2C804B41B157C6200F6CAF2 /* libPods-MDLayout-Masonry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MDLayout-Masonry.a"; path = "../../Pods/build/Debug-iphoneos/libPods-MDLayout-Masonry.a"; sourceTree = "<group>"; };
+		B2C804B91B16B05400F6CAF2 /* DemoHostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoHostView.h; sourceTree = "<group>"; };
+		B2C804BA1B16B05400F6CAF2 /* DemoHostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoHostView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				B20C71C71B12FCE900366747 /* Images.xcassets */,
 				B20C71C91B12FCE900366747 /* LaunchScreen.xib */,
 				B20C71BA1B12FCE900366747 /* Supporting Files */,
+				B2C804B91B16B05400F6CAF2 /* DemoHostView.h */,
+				B2C804BA1B16B05400F6CAF2 /* DemoHostView.m */,
 			);
 			path = MDLayoutSample;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				B20C71C31B12FCE900366747 /* ViewController.m in Sources */,
 				B20C71C01B12FCE900366747 /* AppDelegate.m in Sources */,
 				B20C71BD1B12FCE900366747 /* main.m in Sources */,
+				B2C804BB1B16B05400F6CAF2 /* DemoHostView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

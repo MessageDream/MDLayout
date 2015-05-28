@@ -14,5 +14,5 @@
 @property(nonatomic,strong)UIView *parentView;
 @property(nonatomic,strong)NSMutableDictionary *viewInfo;
 @property(nonatomic,strong)NSMutableArray *constraintsInfo;
-+(UIView *)loadViewWithXMLElement:(RXMLElement *)element andSuperView:(UIView *)superView;
++(UIView *)loadViewWithXMLElement:(RXMLElement *)element superView:(UIView *)superView andHost:(id)host;
 @end

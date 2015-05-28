@@ -29,22 +29,27 @@
 
 	    <Data ref="">
             <DataItem key="" value=""/>
+            <DataArray>
+                <DataItem key="" value=""/>
+                <DataItem key="" value=""/>
+                <DataItem key="" value=""/>
+            </DataArray>
 	    </Data>
      </Resources>
     
     <Layout>
-    	<UIView id="containner" style="pageStyle">
+    	<DemoHostView id="containner" style="pageStyle">
     		<UILabel id="headerLable" text="hello" textColor="#7F7F7F" backgroundColor="#64F3f2" style="textBodyStyle">
     			<Constraints>
     				<Constraint attribute="edges" target="containner" relation="=" constant="150,50,10,50" id="left"/>
     			</Constraints>
     		</UILabel>
-            <UIButton id="headerButton" titleforNormalState="你好" titleforSelectedState="扯淡" selected="YES"  style="buttonStyle">
+            <UIButton id="headerButton" mdoutlet="YES" titleforNormalState="你好" titleforSelectedState="扯淡" selected="YES" buttonType="UIButtonTypeCustom" clickAction="headerButton_click:" style="buttonStyle">
                 <Constraints>
                     <Constraint attribute="width"  relation="=" target="containner" targetAttribute="width" multipliedBy="0.5" id="size"/>
                     <Constraint attribute="top"  relation="=" target="containner" constant="200" id="size"/>
                 </Constraints>
             </UIButton>
-    	</UIView>
+    	</DemoHostView>
     </Layout>
 </View>

@@ -11,7 +11,7 @@
 #import "MDLayout.h"
 
 @interface ViewController ()
-
+@property(nonatomic,strong)UIButton *headerButton;
 @end
 
 @implementation ViewController
@@ -20,7 +20,7 @@
     [super viewDidLoad];
     RXMLElement *rootXML = [RXMLElement elementFromXMLFile:@"demo.xml"];
     //    MDStylesheet *sheet = [MDStylesheet readStyleSheetFromXMLElement:[rootXML child:@"Resources"]];
-    UIView *layoutView = [MDLayoutInfo loadViewWithXMLElement:[rootXML child:@"Layout"] andSuperView:nil];
+    UIView *layoutView = [MDLayoutInfo loadViewWithXMLElement:[rootXML child:@"Layout"] superView:nil andHost:self];
     layoutView.backgroundColor = [UIColor whiteColor];
     self.view = layoutView;
 }
@@ -35,8 +35,9 @@
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
-    [self topLayoutGuide];
-    [self bottomLayoutGuide];
 }
 
+-(void)headerButton_click:(id)sender{
+    NSLog(@"clicked in controller:%@",sender);
+}
 @end

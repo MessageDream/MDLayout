@@ -19,7 +19,7 @@
 @property(nonatomic,strong)NSString *multipliedBy;
 @property(nonatomic,strong)id constant;
 @property(nonatomic,strong)NSString *priority;
-@property(nonatomic,strong)NSString *cid;
+@property(nonatomic,strong)NSString *mid;
 -(instancetype)initWithXMLElement:(RXMLElement *)element;
 -(MASConstraint *)converteMasConstraintWithConstraintMaker:(MASConstraintMaker *)make;
 @end
