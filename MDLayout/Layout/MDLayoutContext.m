@@ -57,10 +57,16 @@
             NSArray *names = e.attributeNames;
             NSString *viewId = [e attribute:@"id"];
             
-            //应用样式
+            //应用类样式
+            MDStyle *style = styleSheet.targetStyleSheet[ename];
+            if (style) {
+                [currentView applyStyle:style];
+            }
+            
+            //应用指定样式
             NSString *styleName= [e attribute:@"style"];
             if (styleName) {
-                MDStyle *style = styleSheet.styleSheet[styleName];
+                style = styleSheet.styleSheet[styleName];
                 if (style) {
                     [currentView applyStyle:style];
                 }

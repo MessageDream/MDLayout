@@ -3,6 +3,6 @@
     <Style name="bottomLableStyle">
         <Setter property="textColor" value="red" />
         <Setter property="font" value="SegoeUI-Bold 25" />
-         <Setter property="backgroundColor" value="yellow" />
+        <Setter property="backgroundColor" value="yellow" />
     </Style>
 </Stylesheet>

@@ -1,16 +1,20 @@
-<View>
+<Page>
     <Resources>
 	    <Stylesheet ref="styleRef.xml">
             <Style name="pageStyle">
                 <Setter property="backgroundColor" value="#7F7F7F" />
             </Style>
+            <Style name="textStyle" target="UILabel">
+                <Setter property="textColor" value="#4455ff" />
+            </Style>
+            
 	        <Style name="textHeaderStyle" target="">
-	            <Setter property="textColor" value="#000000" />
+                <Setter property="textColor" value="black" />
                 <Setter property="backgroundColor" value="green" />
 	            <Setter property="font" value="SegoeUI-Bold 20" />
 	        </Style>
 	        <Style name="buttonStyle">
-                <Setter property="titleforNormalState" value="on my g" />
+                <Setter property="titleforNormalState" value="on my god" />
                 <Setter property="titleforSelectedState" value="click me" />
                 <Setter property="selected" value="YES" />
 	            <Setter property="layer.cornerRadius" value="2" />
@@ -41,7 +45,7 @@
                     <Constraint attribute="right" target="containner" relation="=" constant="-10" id="right"/>
     			</Constraints>
     		</UILabel>
-            <UIButton id="centerButton" mdoutlet="YES" buttonType="UIButtonTypeCustom" clickAction="centerButton_click:" style="buttonStyle">
+            <UIButton id="centerButton" mdoutlet="YES" clickAction="centerButton_click:" style="buttonStyle">
                 <Constraints>
                     <Constraint attribute="width"  relation="=" target="containner" targetAttribute="width" multipliedBy="0.8" id="width"/>
                     <Constraint attribute="height"  relation="=" constant="200" id="height"/>
@@ -57,4 +61,4 @@
             </UILabel>
     	</DemoHostView>
     </Layout>
-</View>
+</Page>
