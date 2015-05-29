@@ -2,6 +2,4 @@
 Pods/
 Podfile.lock
 
-MDLayout.xcworkspace/xcuserdata/jayden.xcuserdatad/UserInterfaceState.xcuserstate
-
-MDLayout.xcworkspace/xcuserdata/jayden.xcuserdatad/UserInterfaceState.xcuserstate
+*.xcuserstate
