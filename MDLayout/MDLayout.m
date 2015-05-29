@@ -9,6 +9,8 @@
 #import "MDLayout.h"
 #import "MDLayoutConfig.h"
 #import "MDLayoutContext.h"
+#import "MGTemplateEngine.h"
+#import "ICUTemplateMatcher.h"
 
 @implementation MDLayout
 
@@ -21,7 +23,12 @@
         return nil;
     }
     NSString *xmlPath = [[[MDLayoutConfig share].xmlBundle bundlePath] stringByAppendingPathComponent:fileName];
-    MDLayoutContext *context = [[MDLayoutContext alloc] initWithXmlPath:xmlPath superView:superView andHost:host];
+    MGTemplateEngine *engine = [MGTemplateEngine templateEngine];
+    [engine setMatcher:[ICUTemplateMatcher matcherWithTemplateEngine:engine]];
+    [engine setObject:@"hello" forKey:@"title"];
+
+    NSString *xmlContent = [engine processTemplateInFileAtPath:xmlPath withVariables:nil];
+    MDLayoutContext *context = [[MDLayoutContext alloc] initWithXmlString:xmlContent superView:superView andHost:host];
     return [context createView];
 }
 @end

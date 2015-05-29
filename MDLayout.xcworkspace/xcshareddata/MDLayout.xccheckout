@@ -12,6 +12,8 @@
 	<dict>
 		<key>4339FD5013899215AC5995B22457FEF2CE4BF2AE</key>
 		<string>https://github.com/MessageDream/MDLayout.git</string>
+		<key>69597A54A55EE7A148A1654F998635C337579421</key>
+		<string>https://github.com/mattgemmell/MGTemplateEngine.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MDLayout.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>4339FD5013899215AC5995B22457FEF2CE4BF2AE</key>
 		<string>..</string>
+		<key>69597A54A55EE7A148A1654F998635C337579421</key>
+		<string>../MDLayout/MGTemplateEngine/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/MessageDream/MDLayout.git</string>
@@ -35,6 +39,14 @@
 			<string>4339FD5013899215AC5995B22457FEF2CE4BF2AE</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MDLayout</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>69597A54A55EE7A148A1654F998635C337579421</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MGTemplateEngine</string>
 		</dict>
 	</array>
 </dict>

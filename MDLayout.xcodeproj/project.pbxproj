@@ -20,6 +20,12 @@
 		B2C804B31B155DAE00F6CAF2 /* UIView+MDExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C804B21B155DAE00F6CAF2 /* UIView+MDExtensions.m */; };
 		B2C804BE1B16DAD900F6CAF2 /* MDLayoutContext.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C804BD1B16DAD900F6CAF2 /* MDLayoutContext.m */; };
 		B2C804C41B16E1EF00F6CAF2 /* MDLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C804C31B16E1EF00F6CAF2 /* MDLayout.m */; };
+		B2C804D91B18326900F6CAF2 /* NSArray_DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C804CB1B18326900F6CAF2 /* NSArray_DeepMutableCopy.m */; };
+		B2C804DA1B18326900F6CAF2 /* NSDictionary_DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C804CD1B18326900F6CAF2 /* NSDictionary_DeepMutableCopy.m */; };
+		B2C804DB1B18326900F6CAF2 /* ICUTemplateMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C804D01B18326900F6CAF2 /* ICUTemplateMatcher.m */; };
+		B2C804DC1B18326900F6CAF2 /* MGTemplateEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C804D21B18326900F6CAF2 /* MGTemplateEngine.m */; };
+		B2C804DD1B18326900F6CAF2 /* MGTemplateStandardFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C804D61B18326900F6CAF2 /* MGTemplateStandardFilters.m */; };
+		B2C804DE1B18326900F6CAF2 /* MGTemplateStandardMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C804D81B18326900F6CAF2 /* MGTemplateStandardMarkers.m */; };
 		B2E64FBF1B14AF7A00705E06 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E64FBE1B14AF7A00705E06 /* RXMLElement.m */; };
 		B2EA72051B161844002048C3 /* UIButton+MDExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EA72041B161844002048C3 /* UIButton+MDExtensions.m */; };
 /* End PBXBuildFile section */
@@ -62,6 +68,22 @@
 		B2C804BD1B16DAD900F6CAF2 /* MDLayoutContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDLayoutContext.m; sourceTree = "<group>"; };
 		B2C804C21B16E1EF00F6CAF2 /* MDLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDLayout.h; sourceTree = "<group>"; };
 		B2C804C31B16E1EF00F6CAF2 /* MDLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDLayout.m; sourceTree = "<group>"; };
+		B2C804C91B18326900F6CAF2 /* DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeepMutableCopy.h; sourceTree = "<group>"; };
+		B2C804CA1B18326900F6CAF2 /* NSArray_DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray_DeepMutableCopy.h; sourceTree = "<group>"; };
+		B2C804CB1B18326900F6CAF2 /* NSArray_DeepMutableCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_DeepMutableCopy.m; sourceTree = "<group>"; };
+		B2C804CC1B18326900F6CAF2 /* NSDictionary_DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_DeepMutableCopy.h; sourceTree = "<group>"; };
+		B2C804CD1B18326900F6CAF2 /* NSDictionary_DeepMutableCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_DeepMutableCopy.m; sourceTree = "<group>"; };
+		B2C804CF1B18326900F6CAF2 /* ICUTemplateMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUTemplateMatcher.h; sourceTree = "<group>"; };
+		B2C804D01B18326900F6CAF2 /* ICUTemplateMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICUTemplateMatcher.m; sourceTree = "<group>"; };
+		B2C804D11B18326900F6CAF2 /* MGTemplateEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateEngine.h; sourceTree = "<group>"; };
+		B2C804D21B18326900F6CAF2 /* MGTemplateEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTemplateEngine.m; sourceTree = "<group>"; };
+		B2C804D31B18326900F6CAF2 /* MGTemplateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateFilter.h; sourceTree = "<group>"; };
+		B2C804D41B18326900F6CAF2 /* MGTemplateMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateMarker.h; sourceTree = "<group>"; };
+		B2C804D51B18326900F6CAF2 /* MGTemplateStandardFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateStandardFilters.h; sourceTree = "<group>"; };
+		B2C804D61B18326900F6CAF2 /* MGTemplateStandardFilters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTemplateStandardFilters.m; sourceTree = "<group>"; };
+		B2C804D71B18326900F6CAF2 /* MGTemplateStandardMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateStandardMarkers.h; sourceTree = "<group>"; };
+		B2C804D81B18326900F6CAF2 /* MGTemplateStandardMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTemplateStandardMarkers.m; sourceTree = "<group>"; };
+		B2C804DF1B18334400F6CAF2 /* MDLayout_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDLayout_Prefix.pch; path = MDLayout/MDLayout_Prefix.pch; sourceTree = "<group>"; };
 		B2E64FBD1B14AF7A00705E06 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
 		B2E64FBE1B14AF7A00705E06 /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
 		B2EA72031B161844002048C3 /* UIButton+MDExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MDExtensions.h"; sourceTree = "<group>"; };
@@ -109,6 +131,7 @@
 		B20C72121B12FD7800366747 = {
 			isa = PBXGroup;
 			children = (
+				B2C804DF1B18334400F6CAF2 /* MDLayout_Prefix.pch */,
 				B20C721D1B12FD7800366747 /* MDLayout */,
 				B20C722A1B12FD7800366747 /* MDLayoutTests */,
 				B20C721C1B12FD7800366747 /* Products */,
@@ -139,6 +162,7 @@
 				B2C804951B1434EC00F6CAF2 /* Resources */,
 				B20C723C1B12FDE100366747 /* Layout */,
 				B2C804911B1434A500F6CAF2 /* Style */,
+				B2C804C51B18326900F6CAF2 /* MGTemplateEngine */,
 			);
 			path = MDLayout;
 			sourceTree = "<group>";
@@ -212,6 +236,52 @@
 				B2EA72041B161844002048C3 /* UIButton+MDExtensions.m */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B2C804C51B18326900F6CAF2 /* MGTemplateEngine */ = {
+			isa = PBXGroup;
+			children = (
+				B2C804D11B18326900F6CAF2 /* MGTemplateEngine.h */,
+				B2C804D21B18326900F6CAF2 /* MGTemplateEngine.m */,
+				B2C804D31B18326900F6CAF2 /* MGTemplateFilter.h */,
+				B2C804D41B18326900F6CAF2 /* MGTemplateMarker.h */,
+				B2C804D51B18326900F6CAF2 /* MGTemplateStandardFilters.h */,
+				B2C804D61B18326900F6CAF2 /* MGTemplateStandardFilters.m */,
+				B2C804D71B18326900F6CAF2 /* MGTemplateStandardMarkers.h */,
+				B2C804D81B18326900F6CAF2 /* MGTemplateStandardMarkers.m */,
+				B2C804C71B18326900F6CAF2 /* Matchers */,
+			);
+			path = MGTemplateEngine;
+			sourceTree = "<group>";
+		};
+		B2C804C71B18326900F6CAF2 /* Matchers */ = {
+			isa = PBXGroup;
+			children = (
+				B2C804C81B18326900F6CAF2 /* DeepMutableCopy */,
+				B2C804CE1B18326900F6CAF2 /* RegexKitLite */,
+			);
+			path = Matchers;
+			sourceTree = "<group>";
+		};
+		B2C804C81B18326900F6CAF2 /* DeepMutableCopy */ = {
+			isa = PBXGroup;
+			children = (
+				B2C804C91B18326900F6CAF2 /* DeepMutableCopy.h */,
+				B2C804CA1B18326900F6CAF2 /* NSArray_DeepMutableCopy.h */,
+				B2C804CB1B18326900F6CAF2 /* NSArray_DeepMutableCopy.m */,
+				B2C804CC1B18326900F6CAF2 /* NSDictionary_DeepMutableCopy.h */,
+				B2C804CD1B18326900F6CAF2 /* NSDictionary_DeepMutableCopy.m */,
+			);
+			path = DeepMutableCopy;
+			sourceTree = "<group>";
+		};
+		B2C804CE1B18326900F6CAF2 /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				B2C804CF1B18326900F6CAF2 /* ICUTemplateMatcher.h */,
+				B2C804D01B18326900F6CAF2 /* ICUTemplateMatcher.m */,
+			);
+			path = RegexKitLite;
 			sourceTree = "<group>";
 		};
 		B2E64FBC1B14AF7A00705E06 /* RaptureXML */ = {
@@ -345,17 +415,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C804DB1B18326900F6CAF2 /* ICUTemplateMatcher.m in Sources */,
+				B2C804D91B18326900F6CAF2 /* NSArray_DeepMutableCopy.m in Sources */,
 				B2C804C41B16E1EF00F6CAF2 /* MDLayout.m in Sources */,
 				B2C804981B14350900F6CAF2 /* MDResources.m in Sources */,
 				B2C804901B14107A00F6CAF2 /* MDLayoutConfig.m in Sources */,
 				B2C804AA1B148D8A00F6CAF2 /* UIColor+MDExtensions.m in Sources */,
 				B2E64FBF1B14AF7A00705E06 /* RXMLElement.m in Sources */,
+				B2C804DC1B18326900F6CAF2 /* MGTemplateEngine.m in Sources */,
+				B2C804DD1B18326900F6CAF2 /* MGTemplateStandardFilters.m in Sources */,
+				B2C804DE1B18326900F6CAF2 /* MGTemplateStandardMarkers.m in Sources */,
 				B2EA72051B161844002048C3 /* UIButton+MDExtensions.m in Sources */,
 				B2C804BE1B16DAD900F6CAF2 /* MDLayoutContext.m in Sources */,
 				B2C804AC1B148D8A00F6CAF2 /* UIImage+MDExtensions.m in Sources */,
 				B2C804B31B155DAE00F6CAF2 /* UIView+MDExtensions.m in Sources */,
 				B2C804A21B146FAD00F6CAF2 /* MDConstraint.m in Sources */,
 				B2C8049C1B14361500F6CAF2 /* MDData.m in Sources */,
+				B2C804DA1B18326900F6CAF2 /* NSDictionary_DeepMutableCopy.m in Sources */,
 				B2C804AB1B148D8A00F6CAF2 /* UIFont+MDExtensions.m in Sources */,
 				B2C804941B1434A500F6CAF2 /* MDStyle.m in Sources */,
 			);
@@ -461,6 +537,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2EEABBFF83B5E44DA5993A38 /* Pods-MDLayout.debug.xcconfig */;
 			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MDLayout/MDLayout_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -476,6 +554,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1FC5E51A99085B1A494C904 /* Pods-MDLayout.release.xcconfig */;
 			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MDLayout/MDLayout_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,

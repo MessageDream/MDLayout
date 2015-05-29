@@ -13,9 +13,11 @@
 
 @interface MDLayoutContext : NSObject
 @property(nonatomic,strong)NSString *xmlpath;
+@property(nonatomic,strong)NSString *xmlString;
 @property(nonatomic,strong)MDStylesheet *styleSheet;
 @property(nonatomic,strong)UIView *superView;
 @property(nonatomic,strong)id host;
 -(instancetype)initWithXmlPath:(NSString *)path superView:(UIView *)superView andHost:(id)host;
+-(instancetype)initWithXmlString:(NSString *)string superView:(UIView *)superView andHost:(id)host;
 -(UIView *)createView;
 @end

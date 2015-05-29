@@ -58,15 +58,6 @@
         <scene sceneID="bKN-Uf-bpC">
             <objects>
                 <viewController id="Cs9-DJ-ZmN" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UMu-ZU-yoZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="7CN-QF-56B"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DaF-cs-SoT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
                     <navigationItem key="navigationItem" id="aXU-he-8aG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyY-cS-CPx" userLabel="First Responder" sceneMemberID="firstResponder"/>

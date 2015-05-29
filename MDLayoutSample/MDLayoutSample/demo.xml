@@ -63,7 +63,7 @@
                     </Constraints>
                 </UIView>
             </UIView>
-    		<UILabel id="headerLable" textAlignment="1" text="hello" style="textHeaderStyle" >
+    		<UILabel id="headerLable" textAlignment="1" text="{{title}}" style="textHeaderStyle" >
     			<Constraints>
     				<Constraint attribute="top" target="containner" relation="=" constant="100" id="top"/>
                     <Constraint attribute="left" target="containner" relation="=" constant="10" id="left"/>

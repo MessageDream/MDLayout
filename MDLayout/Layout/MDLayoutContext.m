@@ -25,12 +25,26 @@
     }
     return self;
 }
+-(instancetype)initWithXmlString:(NSString *)string superView:(UIView *)superView andHost:(id)host{
+    if (self = [super init]) {
+        self.xmlString = string;
+        self.superView = superView;
+        self.host = host;
+    }
+    return self;
+}
 
 -(UIView *)createView{
-    if (!self.xmlpath) {
+    if (!self.xmlpath && !self.xmlString) {
         return nil;
     }
-    RXMLElement *rootXML = [[RXMLElement alloc] initFromXMLFilePath:self.xmlpath];
+    RXMLElement *rootXML;
+    if (self.xmlpath) {
+        rootXML = [[RXMLElement alloc] initFromXMLFilePath:self.xmlpath];
+    }else{
+        rootXML = [[RXMLElement alloc] initFromXMLString:self.xmlString encoding:NSUTF8StringEncoding];
+    }
+   
     self.styleSheet = [MDStylesheet readStyleSheetFromXMLElement:[rootXML child:@"Resources"]];
     return [MDLayoutContext loadViewWithXMLElement:[rootXML child:@"Layout"] styleSheet:self.styleSheet superView:self.superView andHost:self.host];
 }
