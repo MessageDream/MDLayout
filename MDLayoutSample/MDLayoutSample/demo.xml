@@ -17,11 +17,12 @@
                 <Setter property="titleforNormalState" value="on my god" />
                 <Setter property="titleforSelectedState" value="click me" />
                 <Setter property="selected" value="YES" />
-	            <Setter property="layer.cornerRadius" value="2" />
+	            <Setter property="backgroundColor" value="blue" />
+                <Setter property="layer.cornerRadius" value="4" />
 	        </Style>
 	        <Style name="textFieldStyle">
-	            <Setter property="font" value="SegoeUI-Light 17" />
-	            <Setter property="backgroundColor" value="#000000" />
+	            <Setter property="font" value="@font:large" />
+	            <Setter property="backgroundColor" value="red" />
 	            <Setter property="textColor" value="#FFFFFF" />
 	        </Style>
 	    </Stylesheet>
@@ -38,25 +39,52 @@
     
     <Layout>
     	<DemoHostView id="containner" style="pageStyle">
-    		<UILabel id="headerLable" textAlignment="1" text="hello" style="textHeaderStyle">
+            <UIView id="back" backgroundColor="red" layer.cornerRadius="4">
+                <Constraints>
+                    <Constraint attribute="top" target="centerButton" relation="=" targetAttribute="bottom" constant="20" id="top"/>
+                    <Constraint attribute="left" target="containner" relation="=" constant="10" id="left"/>
+                    <Constraint attribute="right" target="containner" relation="=" constant="-10" id="right"/>
+                    <Constraint attribute="height"  relation="=" constant="300" id="height"/>
+                </Constraints>
+                <UIView id="back1" backgroundColor="green">
+                    <Constraints>
+                        <Constraint attribute="top" target="back" relation="=" constant="10" id="top"/>
+                        <Constraint attribute="left" target="back" relation="=" constant="10" id="left"/>
+                        <Constraint attribute="right" target="back" relation="=" constant="-10" id="right"/>
+                        <Constraint attribute="height"  relation="=" constant="100" id="height"/>
+                    </Constraints>
+                </UIView>
+                <UIView id="back2" backgroundColor="yellow">
+                    <Constraints>
+                        <Constraint attribute="bottom" target="back" relation="=" targetAttribute="bottom" constant="-10" id="bottom"/>
+                        <Constraint attribute="left" target="back" relation="=" constant="10" id="left"/>
+                        <Constraint attribute="right" target="back" relation="=" constant="-10" id="right"/>
+                        <Constraint attribute="height"  relation="=" constant="100" id="height"/>
+                    </Constraints>
+                </UIView>
+            </UIView>
+    		<UILabel id="headerLable" textAlignment="1" text="hello" style="textHeaderStyle" >
     			<Constraints>
     				<Constraint attribute="top" target="containner" relation="=" constant="100" id="top"/>
                     <Constraint attribute="left" target="containner" relation="=" constant="10" id="left"/>
                     <Constraint attribute="right" target="containner" relation="=" constant="-10" id="right"/>
+                    <Constraint attribute="height" relation="=" constant="50" id="height"/>
     			</Constraints>
     		</UILabel>
             <UIButton id="centerButton" mdoutlet="YES" clickAction="centerButton_click:" style="buttonStyle">
                 <Constraints>
-                    <Constraint attribute="width"  relation="=" target="containner" targetAttribute="width" multipliedBy="0.8" id="width"/>
-                    <Constraint attribute="height"  relation="=" constant="200" id="height"/>
-                    <Constraint attribute="center"  relation="=" target="containner" id="center"/>
+                    <Constraint attribute="width"  relation="=" target="containner" targetAttribute="width" multipliedBy="0.5" id="width"/>
+                    <Constraint attribute="height"  relation="=" constant="50" id="height"/>
+                    <Constraint attribute="top"  relation="=" target="headerLable" targetAttribute="bottom" constant="10" id="top"/>
+                    <Constraint attribute="centerX"  target="containner" targetAttribute="centerX" id="centerX"/>
                 </Constraints>
             </UIButton>
             <UILabel text="bottom" textAlignment="1" style="bottomLableStyle">
                 <Constraints>
-                    <Constraint attribute="bottom" target="containner" relation="=" constant="-100" id="top"/>
+                    <Constraint attribute="bottom" target="containner" relation="=" constant="-50" id="top"/>
                     <Constraint attribute="left" target="containner" relation="=" constant="10" id="left"/>
                     <Constraint attribute="right" target="containner" relation="=" constant="-10" id="right"/>
+                    <Constraint attribute="height" relation="=" constant="50" id="height"/>
                 </Constraints>
             </UILabel>
     	</DemoHostView>

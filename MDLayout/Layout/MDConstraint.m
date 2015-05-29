@@ -91,6 +91,13 @@
 //    }
 }
 
+-(NSString *)relation{
+    if (!_relation) {
+        _relation = @"mas_equalTo";
+    }
+    return _relation;
+}
+
 -(void)setRelation:(NSString *)relation{
     if ([relation isEqualToString:@"<="]) {
         _relation = @"mas_lessThanOrEqualTo";
@@ -100,6 +107,8 @@
         _relation = @"mas_equalTo";
     }
 }
+
+
 
 -(MASConstraint *)converteMasConstraintWithConstraintMaker:(MASConstraintMaker *)make{
     SEL attributeSelector = NSSelectorFromString(self.attribute);

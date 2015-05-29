@@ -12,6 +12,9 @@
 @class MASConstraint,MASConstraintMaker,RXMLElement;
 
 @interface MDConstraint : NSObject
+{
+    NSString *_relation;
+}
 @property(nonatomic,strong)NSString *attribute;
 @property(nonatomic,strong)NSString *target;
 @property(nonatomic,strong)NSString *targetAttribute;
